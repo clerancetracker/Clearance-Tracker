@@ -13,6 +13,6 @@ for (var i = 0; i < data.length; i++) {
   for (var j = 0; j < data[i].length; i++){
     const node = document.createTextNode(data[i][j].Name);
     list_option.appendChild(node);
+    list.appendChild(list_option);
   }
 }
-list.appendChild(list_option);
