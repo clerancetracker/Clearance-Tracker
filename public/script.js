@@ -9,10 +9,9 @@ fetch('/api/sheets')
 const list = document.getElementById("name-list");
 
 for (var i = 0; i < data.length; i++) {
-  for (var j = 0; j < data[i].length; i++){
-    const list_option = document.createElement("option");
-    list_option.setAttribute("value", data[i][j].Name);
-    list_option.appendChild(node);
-    list.appendChild(list_option);
-  }
+  data[i].forEach(item => {
+    const option = document.createElement("option");
+    option.value = item.Name;
+    list.appendChild(option);
+  });
 }
