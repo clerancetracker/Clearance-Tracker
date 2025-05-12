@@ -11,7 +11,7 @@ const list = document.getElementById("name-list");
 for (var i = 0; i < data.length; i++) {
   for (var j = 0; j < data[i].length; i++){
     const list_option = document.createElement("option");
-    list_option.setAttribute("value", data[i][j]);
+    list_option.setAttribute("value", data[i][j].Name);
     list_option.appendChild(node);
     list.appendChild(list_option);
   }
