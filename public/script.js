@@ -1,5 +1,3 @@
-var data = [];
-
 fetch('/api/sheets')
   .then(res => res.json())
   .then(sheetData => {
@@ -8,9 +6,9 @@ fetch('/api/sheets')
     const list = document.getElementById("name-list");
     const frag = document.createDocumentFragment();
 
-    console.log(data);
+    console.log(sheetData);
 
-    data.flat().forEach(item => {
+    sheetData.flat().forEach(item => {
       const option = document.createElement("option");
       option.value = item.Name;
       frag.appendChild(option);
