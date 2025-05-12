@@ -7,11 +7,12 @@ fetch('/api/sheets')
   });
 
 const list = document.getElementById("name-list");
+const frag = document.createDocumentFragment();
 
-for (var i = 0; i < data.length; i++) {
-  data[i].forEach(item => {
-    const option = document.createElement("option");
-    option.value = item.Name;
-    list.appendChild(option);
-  });
-}
+data.flat().forEach(item => {
+  const option = document.createElement("option");
+  option.value = item.Name;
+  frag.appendChild(option);
+});
+
+list.appendChild(frag);
